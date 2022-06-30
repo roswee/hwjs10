@@ -28,17 +28,17 @@ function showCountries(countries) {
         const generatedList = countries.map(({name, flag}) => 
         `<li>
         <img class="flag" src="${flags.svg}" alt="flag of ${name.common}" width=35px>
-        <spam class="country-name"> ${name}</span>
+        <spam class="country__name"> ${name}</span>
         </li>`).join("");
         countryList.innerHTML = generatedList;
         countryInfo.innerHTML = "";
     } else if (countries.length === 1) {
         countryInfo.innerHTML =
         countries.map(({name, capital, population, flags, languages}) =>
-        `<h1>${name.common}</h1> <img src="${flags.svg}" width=35px>
-        <p>Capital: ${capital}</p>
-        <p> Population: ${population} </p>
-        <p> languages: ${Object.values(languages)}</p>`);
+        `<h1>${name.common}</h1> <img class="flag" src="${flags.svg}" width=35px>
+        <p class="country__capital"> Capital: ${capital}</p>
+        <p class="country__pop"> Population: ${population} </p>
+        <p class="country__lng"> languages: ${Object.values(languages)}</p>`);
         countryList = "";
     } else {
         countryList.innerHTML = "";

@@ -19,4 +19,23 @@ body {
   margin-bottom: 16px;
 }
 
+.flag {
+  border-width: 1px;
+  border-color: #212121;
+}
+
+.country__capital {
+  text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: large;
+}
+
+.country__pop {
+  font-size: larger;
+}
+
+.country__lng {
+  font-size: larger;
+}
 
