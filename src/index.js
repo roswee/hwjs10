@@ -15,7 +15,7 @@ function eventHandle({ target: { value } }) {
         countryInfo.innerHTML = '';
         countryList.innetHTML = '';
     }
-    fetchCountries(trimmedValue).then(showCountries)
+    fetchCountries(trimmedValue).then(showCountries).catch(Notiflix.Notify.failure('Oops, there is no country with that name'));
 };
 
 function showCountries(data) {
