@@ -27,7 +27,7 @@ function showCountries(countries) {
     } else if (countries.length > 1 && countries.length < 10) {
         const generatedList = countries.map(({name, flag}) => 
         `<li>
-        <img class="flag" src="${flags.svg}" alt="flag of ${name.common}">
+        <img class="flag" src="${flags.svg}" alt="flag of ${name.common}" width=35px>
         <spam class="country-name"> ${name}</span>
         </li>`).join("");
         countryList.innerHTML = generatedList;
@@ -35,7 +35,7 @@ function showCountries(countries) {
     } else if (countries.length === 1) {
         countryInfo.innerHTML =
         countries.map(({name, capital, population, flags, languages}) =>
-        `<h1>${name.common}</h1> <img src="&{flags.svg} height=45px">
+        `<h1>${name.common}</h1> <img src="${flags.svg}" width=35px>
         <p>Capital: ${capital}</p>
         <p> Population: ${population} </p>
         <p> languages: ${Object.values(languages)}</p>`);
